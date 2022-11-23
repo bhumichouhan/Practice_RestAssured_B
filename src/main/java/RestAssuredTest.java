@@ -9,13 +9,13 @@ public class RestAssuredTest {
 
 
         Response response = given().
-                when().
-                header("Content-Type", "application/json").
-                body("{\n" +
-                        "    \"email\": \"eve.holt@reqres.in\",\n" +
-                        "    \"password\": \"pistol\"\n" +
-                        "}").
-                post("/api/register");
+                            when().
+                            header("Content-Type", "application/json").
+                            body("{\n" +
+                            "    \"email\": \"eve.holt@reqres.in\",\n" +
+                            "    \"password\": \"pistol\"\n" +
+                            "}").
+                             post("/api/register");
 
         String res = response.getBody().asString();
         System.out.println("status code: " + response.getStatusCode());
